@@ -35,7 +35,7 @@ func NewClient(apiKey string) *Client {
 func (c *Client) Compile(ctx context.Context, format Format, ab AudioBuilder, dst io.Writer) error {
 	fCtx := &fetchContext{durations: map[string]*time.Duration{}}
 
-	conn, resp, err := websocket.DefaultDialer.DialContext(ctx, "ws://0.0.0.0:8080/compile?apiKey="+c.apiKey, nil)
+	conn, resp, err := websocket.DefaultDialer.DialContext(ctx, "wss://podio.poxate.com/compile?apiKey="+c.apiKey, nil)
 	if err != nil {
 		if resp != nil {
 			b, _ := io.ReadAll(resp.Body)
