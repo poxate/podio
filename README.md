@@ -28,7 +28,9 @@ To start using Podio, you first need to create an account at [Poxate.com](https:
 
 To use Podio in your Go project, you can install the library with the following:
 
-`go get github.com/poxate/podio` 
+```
+go get github.com/poxate/podio
+```
 
 ### 3. Set Up Your Client
 
@@ -38,11 +40,6 @@ In your Go application, import the Podio package and initialize a new client wit
 package main
 
 import (
-	"fmt"
-	"log"
-	"os"
-	"time"
-
 	"github.com/poxate/podio"
 )
 
